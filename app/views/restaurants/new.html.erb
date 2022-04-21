@@ -1,0 +1,28 @@
+
+<div class="container" >
+<h1>Add a new restaurant</h1>
+  <div class="row col-12">
+      <%= form_for @restaurant do |f| %>
+      <div class="mb-3 ">
+        <%= f.label :name%>
+        <%= f.text_field :name, class: "col-3"  %>
+      </div>
+      <div class ="mb-3 ">
+        <%= f.label :address %>
+        <%= f.text_field :address, class: "col-9"  %>
+      </div>
+      <div class ="mb-3 col-12">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number %>
+      </div>
+      <div class ="mb-3 col-12">
+        <%= f.label :category %>
+        <%= f.text_field :category %>
+      </div>
+      <div>
+        <%= f.submit "Submit your New Restaurant", class: "btn btn-primary"%>
+      </div>
+      <% end %>
+      <%= link_to "Back to list", restaurants_path %>
+  </div>
+</div>
